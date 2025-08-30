@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeWitch Chronicles - Wireframe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #1a0d26;
+            color: #e6d7ff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Magical background effects */
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 3s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 13, 38, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-bottom: 2px solid #9d4edd;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #c77dff;
+            text-shadow: 0 0 10px #9d4edd;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #e6d7ff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #c77dff;
+            text-shadow: 0 0 5px #9d4edd;
+        }
+
+        /* Main content */
+        .main {
+            margin-top: 80px;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #c77dff, #9d4edd, #7b2cbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(157, 78, 221, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+            color: #b19cd9;
+        }
+
+        .crystal-ball {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle at 30% 30%, rgba(199, 125, 255, 0.3), rgba(157, 78, 221, 0.1));
+            border-radius: 50%;
+            margin: 2rem auto;
+            border: 3px solid #9d4edd;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Section styles */
+        .section {
+            margin: 4rem 0;
+            padding: 3rem;
+            background: rgba(123, 44, 191, 0.1);
+            border-radius: 15px;
+            border: 1px solid #7b2cbf;
+            position: relative;
+            backdrop-filter: blur(5px);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #c77dff;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Grid layouts */
+        .spell-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .spell-card {
+            background: rgba(157, 78, 221, 0.15);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #9d4edd;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .spell-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(157, 78, 221, 0.3);
+            border-color: #c77dff;
+        }
+
+        .spell-card h3 {
+            color: #c77dff;
+            margin-bottom: 1rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #c77dff, #9d4edd, #7b2cbf);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 2rem 0;
+            padding: 0 2rem;
+        }
+
+        .timeline-item:nth-child(odd) {
+            text-align: right;
+            padding-right: calc(50% + 2rem);
+        }
+
+        .timeline-item:nth-child(even) {
+            text-align: left;
+            padding-left: calc(50% + 2rem);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 1rem;
+            width: 15px;
+            height: 15px;
+            background: #c77dff;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px #9d4edd;
+        }
+
+        /* Buttons */
+        .spell-button {
+            background: linear-gradient(45deg, #7b2cbf, #9d4edd);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .spell-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(157, 78, 221, 0.4);
+        }
+
+        .spell-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .spell-button:hover::before {
+            left: 100%;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: rgba(26, 13, 38, 0.8);
+            border-top: 2px solid #7b2cbf;
+            margin-top: 4rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            color: #c77dff;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #e0aaff;
+            transform: scale(1.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .timeline::before {
+                left: 2rem;
+            }
+
+            .timeline-item {
+                padding-left: 4rem !important;
+                padding-right: 2rem !important;
+                text-align: left !important;
+            }
+
+            .timeline-dot {
+                left: 2rem !important;
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Wireframe annotations */
+        .wireframe-note {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            border: 1px dashed #666;
+            max-width: 200px;
+        }
+
+        .note-1 { top: 10px; right: 10px; }
+        .note-2 { top: 50%; left: 10px; }
+        .note-3 { bottom: 10px; right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">🔮 The CodeWitch Chronicles</div>
+            <ul class="nav-links">
+                <li><a href="#grimoire">Grimoire</a></li>
+                <li><a href="#chronicles">Chronicles</a></li>
+                <li><a href="#spells">Code Spells</a></li>
+                <li><a href="#mirror">The Mirror</a></li>
+                <li><a href="#rituals">Rituals</a></li>
+                <li><a href="#contact">Summon Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1>The CodeWitch Chronicles</h1>
+                <p class="hero-subtitle">"Where code meets magic, and bugs become features"</p>
+                <div class="crystal-ball"></div>
+                <button class="spell-button">Enter the Realm ✨</button>
+                <div class="wireframe-note note-1">Hero: Animated crystal ball, particle effects, magical entrance</div>
+            </section>
+
+            <!-- Black Barbie Chronicles Section -->
+            <section id="chronicles" class="section">
+                <h2><span class="section-icon">🖤</span> Black Barbie Chronicles</h2>
+                <p>Personal creative space where unapologetic magic meets storytelling. Real memoirs, imagined tales, and the raw beauty of the creative process.</p>
+                
+                <div class="spell-grid">
+                    <div class="spell-card">
+                        <h3>Latest Chapter</h3>
+                        <p>[Featured story/memoir excerpt]</p>
+                    </div>
+                    <div class="spell-card">
+                        <h3>Character Studies</h3>
+                        <p>[Character development notes]</p>
+                    </div>
+                    <div class="spell-card">
+                        <h3>Style Experiments</h3>
+                        <p>[Layout tests & design trials]</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Mirror (Practice Portfolio) -->
+            <section id="mirror" class="section">
+                <h2><span class="section-icon">🌈</span> The CodeWitch's Mirror: Reflecting the Process</h2>
+                <p>The experimental playground - where ideas get tested, designs get wild, and the "practice" portfolio still slays.</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h3>First Incantation</h3>
+                        <p>[Early design experiments]</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h3>The Great Refactoring</h3>
+                        <p>[Major redesign moments]</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h3>Current Manifestation</h3>
+                        <p>[Present iteration]</p>
+                    </div>
+                </div>
+                <div class="wireframe-note note-2">Timeline shows evolution of projects with interactive hover effects</div>
+            </section>
+
+            <!-- Code Spells & Snippets -->
+            <section id="spells" class="section">
+                <h2><span class="section-icon">🔧</span> Reusable Rituals & Favorite Spells</h2>
+                <p>Magical utility code kept in the back pocket - components, animations, and shortcuts that spark joy.</p>
+                
+                <div class="spell-grid">
+                    <div class="spell-card">
+                        <h3>Modal Magic ✨</h3>
+                        <p>Accessible modal components with smooth animations</p>
+                    </div>
+                    <div class="spell-card">
+                        <h3>Scroll Sorcery 🌟</h3>
+                        <p>Intersection Observer animations and scroll effects</p>
+                    </div>
+                    <div class="spell-card">
+                        <h3>Theme Transmutation 🎨</h3>
+                        <p>Dark/light mode switchers with personality</p>
+                    </div>
+                    <div class="spell-card">
+                        <h3>Flexbox Formulas 📐</h3>
+                        <p>Layout patterns that never fail</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dev Diary -->
+            <section id="grimoire" class="section">
+                <h2><span class="section-icon">🧠</span> Chronicles of Chaos & Clarity</h2>
+                <p>The developer diary - bug battles, breakthrough moments, and the beautiful mess of learning to code.</p>
+                
+                <div class="spell-grid">
+                    <div class="spell-card">
+                        <h3>This Week's Battles</h3>
+                        <p>[Recent challenges overcome]</p>
+                    </div>
+                    <div class="spell-card">
+                        <h3>Aha! Moments</h3>
+                        <p>[Breakthrough discoveries]</p>
+                    </div>
+                    <div class="spell-card">
+                        <h3>StackOverflow Sagas</h3>
+                        <p>[Community help & giving back]</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bootcamp Archive -->
+            <section id="rituals" class="section">
+                <h2><span class="section-icon">💻</span> The Rituals of the Novice</h2>
+                <p>Bootcamp projects archived with love - the to-do apps, blogs, and APIs that taught the fundamentals.</p>
+                
+                <div class="spell-grid">
+                    <div class="spell-card">
+                        <h3>The Sacred To-Do</h3>
+                        <p>Every developer's first ritual</p>
+                    </div>
+                    <div class="spell-card">
+                        <h3>Blog of Beginnings</h3>
+                        <p>Where words met code</p>
+                    </div>
+                    <div class="spell-card">
+                        <h3>API Adventures</h3>
+                        <p>First data summoning attempts</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Idea Graveyard -->
+            <section class="section">
+                <h2><span class="section-icon">💡</span> Notes Left in the Moonlight</h2>
+                <p>Half-baked ideas, abandoned designs, and future magic waiting to be born.</p>
+                
+                <div class="spell-grid">
+                    <div class="spell-card">
+                        <h3>Sleeping Projects</h3>
+                        <p>[Paused but not forgotten]</p>
+                    </div>
+                    <div class="spell-card">
+                        <h3>Dream Sketches</h3>
+                        <p>[Wild concept art & wireframes]</p>
+                    </div>
+                    <div class="spell-card">
+                        <h3>Future Spells</h3>
+                        <p>[Technologies to learn next]</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Theme Concepts -->
+            <section class="section">
+                <h2><span class="section-icon">🎨</span> The Aesthetic Spellbook</h2>
+                <p>Visual inspiration, color palettes, and design magic that guides the craft.</p>
+                
+                <div class="spell-grid">
+                    <div class="spell-card">
+                        <h3>Color Potions</h3>
+                        <p>[Palette explorations]</p>
+                    </div>
+                    <div class="spell-card">
+                        <h3>Typography Totems</h3>
+                        <p>[Font combinations & hierarchy]</p>
+                    </div>
+                    <div class="spell-card">
+                        <h3>Layout Lexicon</h3>
+                        <p>[CSS experiments & patterns]</p>
+                    </div>
+                </div>
+                <div class="wireframe-note note-3">Interactive mood boards with hover previews</div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>🔮 Crafted with code, chaos, and a little bit of magic ✨</p>
+        <div class="social-links">
+            <a href="#">📱</a>
+            <a href="#">💼</a>
+            <a href="#">🐙</a>
+            <a href="#">📧</a>
+        </div>
+        <p><small>© 2025 The CodeWitch Chronicles | Professional Portfolio: [link]</small></p>
+    </footer>
+
+    <script>
+        // Create floating stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numStars = 50;
+            
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = star.style.height = Math.random() * 3 + 1 + 'px';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize
+        createStars();
+
+        // Add magical hover effects to spell cards
+        document.querySelectorAll('.spell-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'rgba(199, 125, 255, 0.2)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'rgba(157, 78, 221, 0.15)';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+/* ===== CODEWITCH CHRONICLES STYLES (MATCHING WIREFRAME) ===== */
+
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: #1a0d26;
+    color: #e6d7ff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* === MAGICAL BACKGROUND EFFECTS === */
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.2); }
+}
+
+/* === HEADER === */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(26, 13, 38, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #9d4edd;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #c77dff;
+    text-shadow: 0 0 10px #9d4edd;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #e6d7ff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #c77dff;
+    text-shadow: 0 0 5px #9d4edd;
+}
+
+/* === MAIN CONTENT === */
+.main {
+    margin-top: 80px;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === HERO SECTION === */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #c77dff, #9d4edd, #7b2cbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(157, 78, 221, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: #b19cd9;
+}
+
+.crystal-ball {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at 30% 30%, rgba(199, 125, 255, 0.3), rgba(157, 78, 221, 0.1));
+    border-radius: 50%;
+    margin: 2rem auto;
+    border: 3px solid #9d4edd;
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* === SECTION STYLES === */
+.section {
+    margin: 4rem 0;
+    padding: 3rem;
+    background: rgba(123, 44, 191, 0.1);
+    border-radius: 15px;
+    border: 1px solid #7b2cbf;
+    position: relative;
+    backdrop-filter: blur(5px);
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #c77dff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-icon {
+    font-size: 1.5rem;
+}
+
+/* === GRID LAYOUTS === */
+.spell-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.spell-card {
+    background: rgba(157, 78, 221, 0.15);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #9d4edd;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.spell-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(157, 78, 221, 0.3);
+    border-color: #c77dff;
+}
+
+.spell-card h3 {
+    color: #c77dff;
+    margin-bottom: 1rem;
+}
+
+/* === TIMELINE === */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #c77dff, #9d4edd, #7b2cbf);
+}
+
+.timeline-item {
+    position: relative;
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+.timeline-item:nth-child(odd) {
+    text-align: right;
+    padding-right: calc(50% + 2rem);
+}
+
+.timeline-item:nth-child(even) {
+    text-align: left;
+    padding-left: calc(50% + 2rem);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 1rem;
+    width: 15px;
+    height: 15px;
+    background: #c77dff;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px #9d4edd;
+}
+
+/* === BUTTONS === */
+.spell-button {
+    background: linear-gradient(45deg, #7b2cbf, #9d4edd);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.spell-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(157, 78, 221, 0.4);
+}
+
+.spell-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.spell-button:hover::before {
+    left: 100%;
+}
+
+/* === FOOTER === */
+.footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(26, 13, 38, 0.8);
+    border-top: 2px solid #7b2cbf;
+    margin-top: 4rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.social-links a {
+    color: #c77dff;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #e0aaff;
+    transform: scale(1.2);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .timeline::before {
+        left: 2rem;
+    }
+
+    .timeline-item {
+        padding-left: 4rem !important;
+        padding-right: 2rem !important;
+        text-align: left !important;
+    }
+
+    .timeline-dot {
+        left: 2rem !important;
+        transform: translateX(-50%);
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    .spell-grid {
+        grid-template-columns: 1fr;
+    }
+}
