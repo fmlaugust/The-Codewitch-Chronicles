@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Code Witch - Epistolary Prototype</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background: #111;
+        color: #fff;
+        margin: 0;
+        padding: 2em;
+    }
+    h1 {
+        text-align: center;
+        color: #ff66b2;
+        font-family: 'Georgia', serif;
+    }
+    .story-timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    /* Letters */
+    .letter {
+        background: #1a1a1a url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
+        border-radius: 10px;
+        padding: 2em;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    .letter:hover {
+        transform: scale(1.02);
+    }
+    .letter-header {
+        font-family: 'Courier New', monospace;
+        color: #ff99cc;
+        margin-bottom: 1em;
+    }
+    /* Emails */
+    .email {
+        background: #222;
+        border-left: 4px solid #ff66b2;
+        padding: 1.5em;
+        border-radius: 8px;
+        transition: background 0.3s;
+        cursor: pointer;
+    }
+    .email:hover {
+        background: #333;
+    }
+    .email-header {
+        font-weight: bold;
+        color: #ff99cc;
+        margin-bottom: 0.5em;
+    }
+    .email-body {
+        margin-left: 1em;
+        line-height: 1.5;
+    }
+    /* Chat Threads */
+    .chat {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    .bubble {
+        max-width: 60%;
+        padding: 0.8em 1em;
+        border-radius: 15px;
+        line-height: 1.4;
+        position: relative;
+    }
+    .left {
+        background: #ff66b2;
+        color: #111;
+        align-self: flex-start;
+    }
+    .right {
+        background: #ffccf2;
+        color: #111;
+        align-self: flex-end;
+    }
+    .bubble::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+    .left::after {
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #ff66b2 transparent transparent;
+        left: -10px;
+        top: 10px;
+    }
+    .right::after {
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #ffccf2;
+        right: -10px;
+        top: 10px;
+    }
+</style>
+</head>
+<body>
+<h1>The Code Witch: Epistolary Prototype</h1>
+<div class="story-timeline">
+
+    <!-- Letter -->
+    <div class="letter">
+        <div class="letter-header">Letter from Cassandra • Seoul, November 12</div>
+        <p>My dear friend,<br>
+        I write to you in the hush of midnight, when the city outside whispers secrets only I can hear. Julian has finally made his intentions clear, yet I wonder—am I the student or the lesson?<br><br>
+        Yours,<br>
+        Cassandra</p>
+    </div>
+
+    <!-- Email -->
+    <div class="email">
+        <div class="email-header">From: Julian Devereux &lt;julian@seoulcourts.edu&gt;<br>
+            To: Narrator &lt;newexpat@gmail.com&gt;<br>
+            Subject: Lesson Plans (and other matters)<br>
+            Date: November 13, 2025, 22:47
+        </div>
+        <div class="email-body">
+            You asked about discretion. Let’s not confuse etiquette with curiosity. The students are listening—but not us. Meet me at room 12B tomorrow, after hours.<br><br>
+            - Julian
+        </div>
+    </div>
+
+    <!-- Chat Thread -->
+    <div class="chat">
+        <div class="bubble left">Julian: Arrived at the café yet? 🖤</div>
+        <div class="bubble right">Narrator: Just got here. The usual table?</div>
+        <div class="bubble left">Cassandra: Don’t forget me 😉</div>
+        <div class="bubble right">Narrator: Never. You always find the best seats.</div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dangerous Liaisons | Black Barbie Chronicles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;}
+    :root {
+      --midnight:#0a0a0f;--deep-purple:#1a0d2e;--witch-purple:#2d1b4e;
+      --neon-pink:#ff006e;--electric-blue:#8338ec;--gold:#ffbe0b;
+      --silver:#c7d2fe;--blood:#c1121f;--smoke:rgba(255,255,255,0.1);
+      --glass:rgba(255,255,255,0.05);
+    }
+    body{font-family:'Crimson Text',serif;background:linear-gradient(135deg,var(--blood)0%,var(--deep-purple)50%,var(--midnight)100%);color:var(--silver);line-height:1.7;min-height:100vh;}
+    .container{max-width:800px;margin:0 auto;padding:2rem;}
+    .back-nav{position:fixed;top:2rem;left:2rem;z-index:100;}
+    .back-link{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--smoke);padding:.8rem 1.5rem;color:var(--silver);text-decoration:none;border-radius:25px;transition:.3s;font-weight:600;}
+    .back-link:hover{background:var(--neon-pink);color:#fff;box-shadow:0 10px 30px rgba(255,0,110,.3);}
+    .page-header{text-align:center;padding:8rem 0 4rem;}
+    .page-title{font-family:'Playfair Display',serif;font-size:3.5rem;background:linear-gradient(45deg,var(--neon-pink),var(--gold));background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1rem;text-shadow:0 0 40px rgba(255,0,110,.3);}
+    .page-subtitle{font-size:1.3rem;color:var(--silver);font-style:italic;margin-bottom:3rem;}
+    .chapter-grid{display:grid;gap:3rem;margin:4rem 0;}
+    .chapter-card{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--smoke);border-radius:20px;padding:3rem;position:relative;overflow:hidden;transition:.3s;}
+    .chapter-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--blood),var(--neon-pink));opacity:0;transition:.3s;}
+    .chapter-card:hover::before{opacity:1;}
+    .chapter-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(193,18,31,.3);border-color:var(--blood);}
+    .chapter-title{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--neon-pink);margin-bottom:1rem;cursor:pointer;}
+    .chapter-excerpt{font-size:1.1rem;line-height:1.8;margin-bottom:2rem;color:var(--silver);}
+    .chapter-meta{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;color:var(--silver);opacity:.8;border-top:1px solid var(--smoke);padding-top:1rem;}
+    .read-more{background:linear-gradient(45deg,var(--blood),var(--neon-pink));border:none;padding:.8rem 2rem;color:#fff;border-radius:25px;cursor:pointer;transition:.3s;font-family:'Crimson Text',serif;font-weight:600;text-decoration:none;display:inline-block;}
+    .read-more:hover{transform:translateY(-3px);box-shadow:0 15px 30px rgba(193,18,31,.4);}
+    .warning-badge{background:var(--blood);color:#fff;padding:.3rem .8rem;border-radius:15px;font-size:.8rem;font-weight:600;}
+    .full-text{display:none;margin-top:1.5rem;border-top:1px solid var(--smoke);padding-top:1.5rem;}
+    .full-text.visible{display:block;}
+  </style>
+</head>
+<body>
+  <nav class="back-nav">
+    <a href="../index.html" class="back-link">← Back to Chronicles</a>
+  </nav>
+
+  <div class="container">
+    <header class="page-header">
+      <h1 class="page-title">Dangerous Liaisons</h1>
+      <p class="page-subtitle">Decadent tales of aristocratic scandal in the land of morning calm</p>
+    </header>
+
+    <div class="chapter-grid">
+      <!-- Chapter 1 -->
+      <article class="chapter-card">
+        <h2 class="chapter-title">Chapter 1: The Expatriate's Gambit</h2>
+        <div class="chapter-excerpt">
+          <p>Seoul's coffee shop aristocracy operates by rules as complex as any French court...</p>
+          <p><em>"The game begins the moment you step off the plane. Everyone's playing, whether they know it or not."</em></p>
+        </div>
+        <div class="full-text">
+          <p><em>I did not realize how quickly the truth of that statement would sink its claws into me until I found myself in the thick of it: the hidden court of Seoul's expatriate teachers, barflies, pseudo-academics, and dreamers. They called themselves educators, language mercenaries, wanderers in search of enlightenment. In reality, they were courtiers—scheming, posturing, and seducing with all the precision of aristocrats at Versailles.</em></p>
+          
+          <p>Seoul, in the crisp autumn of my arrival, was a city pulsing with electricity. The streets of Gangnam glowed with neon, karaoke bars spilled out raucous laughter, and beyond it all lay the quieter enclaves—small districts where expats colonized certain cafés, clubs, and rooftop bars, creating their own miniature empires of intrigue.</p>
+          
+          <p>The first rule of this aristocracy was location.</p>
+          
+          <p>A certain café in Itaewon—its name was Caffè Filigrane—served as throne room, confessional, and dueling ground. It was not extraordinary by Seoul standards: small marble tables, good espresso, discreet jazz drifting from hidden speakers. But its clientele mattered. The foreign teachers who gathered there had the strange aura of courtiers who both despised and worshipped their own stage. They gossiped about who had been hired at which school, which director favored which "model teacher," and who had been seen slipping home with whom after last call.</p>
+          
+          <p>It was here I made my entrance, still raw from jet lag, still fumbling in the cultural dark.</p>
+          
+          <p>I was not dressed with the casual sophistication the veterans carried—scarves tossed just so, button-downs unbuttoned at the perfect angle, designer knockoffs treated as if they were couture. I wore what was practical for the long haul: black trousers, a clean blouse, a jacket that still smelled faintly of duty-free perfume.</p>
+          
+          <p>My mistake, of course, was ordering a caramel latte.</p>
+          
+          <p>At Filigrane, you ordered espresso—straight—or an Americano, black. Anything flavored was considered gauche, as though you were broadcasting that you hadn't yet understood the codes. I did not know this. But the ripple of amusement that passed across the room told me quickly enough.</p>
+          
+          <p><em>"New,"</em> someone murmured from the corner.</p>
+          
+          <p>The voice belonged to a man reclining with aristocratic laziness against a leather banquette. His hair was the color of dark wine, his eyes sharp with amusement. He was flanked by two women, both immaculate in silk blouses and lipstick shades named after sins. Their laughter, when it followed his observation, was neither cruel nor kind—merely an acknowledgment that another pawn had stepped onto the chessboard.</p>
+          
+          <p>I would come to know him as Julian Devereux, though his real name was undoubtedly something more ordinary. Everyone here had adopted roles, masks more dazzling than their passports. Julian was the rake, the libertine philosopher who could discourse on Foucault while undressing you with his gaze. The women at his side? Cassandra, with her dagger wit and the patience of a black widow, and Mariel, whose softness concealed a calculating hunger.</p>
+          
+          <p>They did not invite me to their table that first day. That would have been too simple. No, the court required tests, gestures, gambits.</p>
+          
+          <p>Over the following weeks, I began to understand how intricately the hierarchies were woven.</p>
+          
+          <p>There were the Idealists—bright-eyed graduates who claimed they had come to teach out of love for Korean culture, though most were seduced more by K-pop and dramas than pedagogy. They were tolerated but mocked, their earnestness an easy target.</p>
+          
+          <p>There were the Survivors—those who had stayed longer than they should have, clinging to hagwon contracts like lifeboats, drinking away disillusion in smoky bars.</p>
+          
+          <p>And then, at the very top, the Aristocracy Proper—those who seemed to move effortlessly through both expat and Korean social circles. They had money, or at least the illusion of it, and wielded desire as a weapon. Lovers, allies, enemies—they cycled through them with the deliberate cruelty of courtiers testing new perfumes.</p>
+          
+          <p>I was determined not to remain in the lower ranks.</p>
+          
+          <p>The first step was learning to play the coffeehouse game. You did not rush to speak. You observed. You offered a remark only when it was perfectly timed, like a fan opening in a salon. Gossip was currency, and scandal was more valuable than truth.</p>
+          
+          <p>It was through gossip that I first heard whispers of "The Gambit."</p>
+          
+          <p>According to legend, every newcomer worth noticing had to attempt a gambit: a bold move that signaled you were not merely another forgettable teacher passing through. It could be a seduction, a public cutting remark, a conquest of status. The nature of it mattered less than the audacity.</p>
+          
+          <p>I knew my moment had arrived the night I found myself seated across from Julian at a wine bar in Apgujeong, his glass of Bordeaux poised like a scepter.</p>
+          
+          <p><em>"You're quieter than most,"</em> he observed, his voice a velvet blade. <em>"Most arrive desperate to be seen."</em></p>
+          
+          <p><em>"Perhaps I prefer to be underestimated."</em></p>
+          
+          <p>His smile deepened. <em>"Dangerous words. Do you know the rules of this little society you've joined?"</em></p>
+          
+          <p><em>"I'm learning."</em></p>
+          
+          <p><em>"Then here is your lesson. Everyone here wants two things: to be envied, and to be desired. Sometimes both at once. Everything else—teaching, money, even friendship—is incidental. Remember that, and you might survive."</em></p>
+          
+          <p>He leaned closer, the scent of tobacco and cologne wrapping around me like smoke. <em>"The game begins the moment you step off the plane. Everyone's playing, whether they know it or not."</em></p>
+          
+          <p>I felt the weight of his gaze, and for a heartbeat, I wondered if I was being invited into something darker than a mere metaphorical game. But his smile returned to languid detachment, and the moment dissolved.</p>
+          
+          <p>Still, the words lingered.</p>
+          
+          <p>My gambit took form almost without intention.</p>
+          
+          <p>At Filigrane, Cassandra had a reputation for her cruelty. She prided herself on unmasking the weak, exposing them with devastating wit. One afternoon, she turned her gaze on me.</p>
+          
+          <p><em>"You remind me of myself, when I was new,"</em> she said sweetly, loud enough for others to hear. <em>"Wide-eyed, eager, still thinking this city is a storybook. Don't worry—you'll harden. They all do."</em></p>
+          
+          <p>Laughter rippled. My humiliation was expected.</p>
+          
+          <p>Instead, I smiled. <em>"Then let us hope I harden into something valuable, not brittle. Diamonds, after all, are born under pressure. Glass simply shatters."</em></p>
+          
+          <p>The silence that followed was sharp and satisfying. Julian's eyes gleamed with approval. Even Mariel hid a smirk. Cassandra, for the first time, had no immediate retort.</p>
+          
+          <p>It was a small victory, but it was mine.</p>
+          
+          <p>The gambit had been played.</p>
+          
+          <p>From then on, invitations shifted. I was drawn into private conversations, rooftop soirees, midnight taxi rides through the city. I learned to drink soju like water, to navigate the subtle courtship of Korean businessmen who prowled the same haunts as the expats, to dance in smoky clubs until dawn with strangers who whispered promises of secrets.</p>
+          
+          <p>Desire became less about bodies than about power. Who could attract attention without appearing to seek it? Who could steal a lover merely for sport? Who could ruin a rival with nothing more than a rumor murmured over coffee?</p>
+          
+          <p>And yet, beneath the games, a current of real temptation ran.</p>
+          
+          <p>Julian was the most dangerous of all. He did not chase; he waited. His glances lingered like a hand at the nape of my neck, his words always double-edged. I found myself watching for him at every gathering, measuring my wit against his, wondering what it would mean to surrender—or to conquer.</p>
+          
+          <p>One evening, after a particularly decadent party in Hannam, where champagne flowed like water and half the guests disappeared into shadowed rooms before midnight, I found myself walking beside him through the empty streets. The air was cool, scented faintly with roasted chestnuts from a late-night vendor.</p>
+          
+          <p><em>"Tell me,"</em> he said softly, <em>"why did you come here? Truly."</em></p>
+          
+          <p>The question was intimate, more dangerous than a touch. I hesitated, then answered. <em>"Escape."</em></p>
+          
+          <p>His smile was faint, almost sad. <em>"We all came for that. The difference is in what we're willing to do to stay gone."</em></p>
+          
+          <p>We stopped beneath a streetlamp, its glow cutting through the darkness. For a moment, I thought he would kiss me. My pulse quickened, the world narrowing to the space between us. But instead, he stepped back, bowing slightly, a mocking courtier.</p>
+          
+          <p><em>"Careful, darling. The game consumes those who forget it is a game."</em></p>
+          
+          <p>And just like that, he vanished into the night, leaving me restless and burning with questions.</p>
+          
+          <p>Seoul had become my Versailles, and I its newest conspirator.</p>
+          
+          <p>I understood now: to survive here was not enough. To thrive, one must seduce, manipulate, and wound with elegance. Friendships were alliances, lovers were trophies, betrayals were performances staged for an audience sipping espresso.</p>
+          
+          <p>And somewhere within it, I was no longer merely playing. I was becoming.</p>
+          
+          <p>The expatriate's gambit was not a single move but an initiation—a bloodless duel in which one proved worthy of desire and envy. I had won my opening match. The next battles would be harder, and far more intoxicating.</p>
+          
+          <p>But I had tasted the thrill of victory, and I would not stop.</p>
+          
+          <p>For in the land of morning calm, scandal was the true currency.</p>
+          
+          <p><em>And I intended to be very, very rich.</em></p>
+        </div>
+        <div class="chapter-meta">
+          <span>Draft • 2,400 words</span>
+          <span class="warning-badge">Adult Content</span>
+        </div>
+        <a href="#" class="read-more">Read Full Chapter</a>
+      </article>
+
+      <!-- Chapter 2 -->
+      <article class="chapter-card">
+        <h2 class="chapter-title">Chapter 2: Midnight at the Noraebang</h2>
+        <div class="chapter-excerpt">
+          <p>Private karaoke rooms are where Seoul's expatriate society reveals its true nature...</p>
+          <p><em>"In the dim light of room 12B, we were all secrets waiting to be spilled."</em></p>
+        </div>
+        <div class="full-text">
+          <<p>The noraebang smelled of damp carpet, cigarette smoke, and the sharp tang of soju. Seoul's neon bled through the narrow windows, streaks of pink and purple across the velvet seats and lacquered tables, turning every shadow into a caress. I had been invited—or, rather, summoned—by Julian, whose messages had been infuriatingly vague: "Midnight. Room 12B. Your discretion will be rewarded."</p>
+
+        <p>The moment I pushed open the sliding door, I felt the game shift beneath me. Julian was already there, lounging with the sort of languid command that made entire rooms bend toward him. Cassandra and Mariel flanked him like twin sirens, their smiles teasing and predatory. The dim light struck Mariel's skin like honeyed sunlight, while Cassandra's sharp eyes caught mine with the precision of a guillotine.</p>
+
+        <p>I had learned, over the past weeks, that in this expatriate court, the noraebang was the ultimate arena. Here, masks fell, and true appetites were revealed. A karaoke microphone could be as dangerous as a dagger; a glass of soju could loosen tongues, and boundaries dissolved under the pulse of music and desire.</p>
+
+        <p>Julian rose when he saw me, bowing slightly in mock ceremony, a glass of dark wine cradled in his long fingers. "Welcome," he murmured, the words low and intimate, brushing the air around my ear. "The stage is yours, should you wish it."</p>
+
+        <p>I swallowed hard. The last thing I wanted was to seem naive. Yet my pulse thrummed with the heady thrill of danger. "I'm learning," I said, echoing the words I had used weeks before in the café. Somehow, they felt heavier here, charged with anticipation.</p>
+
+        <p>Mariel slid onto the couch beside me, her leg brushing mine, her perfume a subtle, intoxicating blend of vanilla and musk. "Do you know the rules?" she whispered, leaning close, the warmth of her body against mine igniting a spark I did not fully understand. "Once the door closes, nothing here stays behind it. Not words. Not hands. Not…" Her gaze lingered in a way that left the rest unsaid, the invitation hanging in the thick, humid air.</p>
+
+        <p>Cassandra, ever the observer, perched at the end of the sofa, arms crossed, expression serene but electric. "You'll learn fast," she said, her voice low, a soft purr threaded with steel. "Or you'll leave embarrassed. Either way, the story will be told."</p>
+
+        <p>Julian gestured for everyone to start. The first song was a soft pop ballad, the kind that allows for lingering looks and gentle teasing. I watched as he sang, his voice smooth, every note a brushstroke across desire. Mariel laughed softly, pressing close to him as if claiming a small corner of him for herself, while Cassandra's gaze remained fixed on me, challenging, daring.</p>
+
+        <p>By the time the second song began—a sultry, late-night R&B track—the room's atmosphere had shifted. Soju flowed freely, glasses clinking in rituals of unspoken agreement. Eyes lingered longer than polite conversation required. Fingers brushed across knees, accidental or intentional—I could not tell.</p>
+
+        <p>Julian leaned toward me, his lips brushing my ear. "Do you want to play?" he murmured. "Truly play?"</p>
+
+        <p>I nodded, though my heart raced. It was clear now that the game was no longer metaphorical. Here, in the shadows of 12B, the stakes were flesh, desire, and reputation.</p>
+
+        <p>He led me to the small stage, microphone in hand. Our duet began innocently enough—an uptempo K-pop hit—but soon, the lyrics became a conduit for something darker. Hands found hands. Shoulders brushed. Eyes locked in challenges that had nothing to do with music. Every note was a flirtation, every chorus a duel.</p>
+
+        <p>Mariel joined us mid-song, her laugh light and teasing, pressing herself against Julian in ways that tested the boundaries of intimacy. Cassandra's hands were on my waist before I realized, guiding me into rhythm, her fingers firm, insistent. The air was electric, alive with the tension of four bodies circling, colliding, retreating.</p>
+
+        <p>By the third song, the room had dissolved into chaos. Sweat glimmered on foreheads. Buttons were carelessly undone. Jackets pooled on chairs. Julian's lips found mine in a moment that was both shocking and inevitable, the kiss deep and demanding. My hands tangled in his hair, in the silken sweep of his collar, tasting the sharp bite of wine and desire.</p>
+
+        <p>Cassandra watched, then smiled, the cruelty of her approval sharp as a knife. Mariel's hands traced along my arms, teasing, pulling me toward her chest, her lips brushing my shoulder. Every glance, every touch was a transaction—a test of limits, a provocation.</p>
+
+        <p>The noraebang had become a private theater of decadence. Shadows pooled around the edges, isolating our small world from the rest of the city. Neon light flickered across flushed skin, and the music became a soundtrack to acts of want and seduction that were no longer metaphorical.</p>
+
+        <p>Julian's hands moved lower, under the thin fabric of my blouse. I shivered, both from the contact and from the thrill of the group's gaze. Cassandra's fingertips found mine, guiding them across her curves, her lips hovering close enough to breathe on me. Mariel pressed her body against my back, whispering encouragement, teasing against my ear.</p>
+
+        <p>Every boundary I thought I had evaporated. Desire was no longer polite or hidden—it was invasive, demanding, intoxicating. My breaths came in shallow gasps as hands, mouths, and whispers assaulted me with simultaneous seduction.</p>
+
+        <p>Julian murmured in my ear, "You see? Here, there are no pretenses. Just what we want. And what we are willing to take."</p>
+
+        <p>I nodded, too lost in sensation to form words. His lips trailed down my neck, his hands roaming over skin that felt simultaneously mine and yet entirely claimed by him. Cassandra pressed her mouth to mine in a brief, electric kiss that was both tender and possessive. Mariel's fingers danced along my spine, the touch teasing and exploratory.</p>
+
+        <p>The lines between us blurred. Acts of intimacy became both personal and performative. I kissed Julian deeply, tasting both wine and heat. Cassandra's laughter—soft, triumphant—echoed in my ear as Mariel's hands roamed, claiming, testing. I felt like a vessel for all their desires, and in turn, I claimed each of them in small, deliberate touches, tests of control and surrender.</p>
+
+        <p>The songs faded into silence as hands and lips traced paths over trembling skin. Julian's gaze caught mine, sharp and dangerous. "Do you understand now?" he whispered, the threat and promise intertwined. "This is how the night works. This is how the power flows."</p>
+
+        <p>I nodded, trembling, fully aware that I had crossed a threshold. The room, once a safe stage, had become a crucible. Desire, rivalry, jealousy, and pleasure interwove in a tapestry of scandal and indulgence.</p>
+
+        <p>By the fourth song, the sexual tension reached a peak I had not anticipated. Clothes were disheveled, buttons undone, skirts hiked, ties loosened. Julian pressed me against the wall, his body claiming mine, lips and hands both demanding and tender. Cassandra watched, a sly, predatory smile on her lips, teasing me to reciprocate, to claim my own dominance. Mariel's body pressed against me from behind, her warmth a delicious torment.</p>
+
+        <p>It was a dance of possession, a ballet of craving. Hands found flesh. Mouths met mouths. Breath mingled, hot and sweet. The room smelled of sweat, perfume, and the tang of lust. Every gasp, every moan, was amplified by the walls, bouncing back to us as confirmation of our transgressions.</p>
+
+        <p>Julian's movements were precise, controlling, and yet attuned to my responses. Cassandra's teasing ministrations sharpened my awareness of every nerve ending, every shiver. Mariel's encouragement drew a raw, honest desire from within me, compelling me to take risks I would not have imagined mere weeks ago.</p>
+
+        <p>Time became meaningless. The world outside the noraebang ceased to exist. Only the neon glow, the pulse of music, the taste of wine and skin, and the dangerous heat of shared lust remained.</p>
+
+        <p>Finally, when we collapsed into a tangled heap of limbs and laughter, breathless and trembling, Julian's lips brushed my ear one last time. "Remember this night," he murmured. "Not for what we did…but for what it taught you. Discretion, desire, power. And how they intertwine."</p>
+
+        <p>Cassandra laughed softly, brushing hair from her face, her eyes glinting with mischief. "And the stories we will tell in the morning, of course."</p>
+
+        <p>Mariel leaned against me, soft and warm, a conspiratorial smile playing on her lips. "Do you understand now, newcomer?" she whispered. "This is just the beginning."</p>
+
+        <p>I did. And yet, I did not.</p>
+
+        <p>As I dressed in the dim light, smoothing out the disheveled remnants of what had been both an explicit display of desire and a performance of social strategy, I felt something new stir within me—a combination of power, lust, and ambition. I had survived the gambit of Filigrane. I had survived the noraebang. But survival was no longer enough. I wanted mastery.</p>
+
+        <p>Julian watched me with the faintest of smiles, his hand brushing my shoulder, a silent promise of more to come. Cassandra and Mariel lingered, subtle reminders that I was both prey and predator in this decadent court.</p>
+
+        <p>As we exited into the crisp night air, the city alive with neon and laughter, I knew one immutable truth: in Seoul, desire was a weapon, secrecy a currency, and the noraebang the ultimate proving ground.</p>
+
+        <p>I had played the night and learned its cruel, beautiful lessons. And I would play again.</p>
+
+        <p>Because in the land of morning calm, pleasure and power were inseparable. And I was ready to claim them both.</p>
+        </div>
+        <div class="chapter-meta">
+          <span>Complete • 3,100 words</span>
+          <span class="warning-badge">Explicit</span>
+        </div>
+        <a href="#" class="read-more">Enter the Room</a>
+      </article>
+
+      <!-- Chapter 3 -->
+      <article class="chapter-card">
+        <h2 class="chapter-title">Chapter 3: The Academic Seduction</h2>
+        <div class="chapter-excerpt">
+          <p>University politics in Korea make Versailles look like a children's playground...</p>
+          <p><em>"He spoke of lesson plans, but his eyes were writing entirely different curricula."</em></p>
+        </div>
+        <div class="full-text">
+          <p>I arrived at Seojin University under a veil of purpose. My dossier was impeccable, my letters of recommendation polished to bureaucratic perfection. Yet beneath the veneer of professionalism, I carried the memory of 12B, the night when boundaries had blurred, and the taste of danger had become intoxicating. Here, among lecture halls and fluorescent lights, I discovered a different court—a universe of ambition, pretense, and the subtle seductions of intellect.</p>
+
+<p>The campus was vast, a forest of modern glass and stark concrete punctuated by cherry trees shedding their autumn leaves. Students scuttled between buildings, earbuds in, oblivious to the machinations swirling above them. Professors glided through the corridors with the imperious air of minor monarchs, syllabi clutched like scepters. Administrators watched like hawks, the balance of power always shifting.</p>
+
+<p>Julian had called ahead, arranging an introduction with Professor Han, the chair of the English department. He met me in his office, a library of mahogany shelves and leather-bound journals surrounding us like silent witnesses. I noticed first his hands—long, pale, precise—then his eyes, which lingered in a way that suggested he measured more than my resume. He spoke of lesson plans, grading rubrics, and departmental goals, but I could not focus on the words. My attention was claimed entirely by the subtext, the slow burn of intent in every glance.</p>
+
+<p>“Your methods are… unconventional,” he said finally, closing his notebook with a deliberate click. “I’m curious to see how you adapt to our culture here.”</p>
+
+<p>“I adapt quickly,” I replied, hiding both excitement and apprehension. “And I always follow the curriculum.”</p>
+
+<p>“Of course,” he murmured, though his gaze suggested he meant something else entirely. A flicker of a smile crossed his lips, subtle, dangerous. “Discretion will serve you better than rigid obedience.”</p>
+
+<p>I understood instantly. In this world, as in the cafes and noraebangs, games of desire and power were inseparable. Julian had warned me: nothing here was simple. University politics in Korea made Versailles look like a children’s playground. Every syllable was a potential threat, every compliment a challenge.</p>
+
+<p>That evening, Julian, Cassandra, Mariel, and I convened at a quiet bar near Hyehwa. The lights were soft, the wine deep and dark, and the hum of conversation was a perfect veil for whispered strategies. Cassandra perched gracefully, fingers trailing along the rim of her glass as if she were mapping out the next move. Mariel’s smile was radiant, but beneath it lay a hunger I could feel in the press of her thigh against mine.</p>
+
+<p>“You must be careful,” Julian murmured as he leaned toward me. “Here, knowledge is power, and power is desire. The two are inseparable. The wrong flirtation—or the right one—can make or break a career.”</p>
+
+<p>I sipped my wine, letting his words settle like fire along my nerves. “And how does one distinguish the wrong from the right?”</p>
+
+<p>“You feel it,” he said, brushing his fingers against mine, a spark in the dim light. “And then you act. Or resist. Or—” He smiled, dangerously enigmatic—“you manipulate.”</p>
+
+<p>The conversation turned to a faculty party later that week, a gathering that would determine alliances, reveal ambitions, and, inevitably, expose desires. I felt a thrill of anticipation. It was not merely social; it was academic warfare disguised as cordiality, and Julian, as always, intended to play on the edge.</p>
+
+<p>The night of the party arrived with the chill of early winter pressing against the campus. Faculty members moved through the halls in clusters, their conversation polite but sharp, laughter carefully measured. I entered beside Julian, who had chosen a tailored black suit that emphasized both elegance and dominance. Cassandra’s red dress was a blade of color slicing through the crowd; Mariel’s cream silk blouse glimmered softly, her movements teasing, deliberate.</p>
+
+<p>We were courtiers in this new court, and every gesture was a declaration. Julian’s hand brushed mine beneath the table during introductions, a subtle claim. I returned the touch, a small victory, a statement: I was present, aware, unafraid.</p>
+
+<p>Professor Han arrived moments later, impeccably dressed, his gaze scanning the room before it rested on me. “Ah, the newcomer,” he said, smooth and deliberate. “I’ve heard…interesting things about you.”</p>
+
+<p>I met his eyes steadily. “All true, I assure you.”</p>
+
+<p>Julian’s lips curved in approval. Cassandra and Mariel smiled knowingly. The game had begun.</p>
+
+<p>Conversation turned to syllabi, research, pedagogy—but the subtext was richer than any lecture. Professor Han’s hand brushed mine while discussing English phonetics; Julian’s whispered comments revealed rivalries I had not anticipated; Cassandra’s laughter punctuated the pauses, her fingers tracing arcs in the air that seemed to mark invisible territories. Mariel leaned against me, her warmth a silent encouragement, her lips brushing my shoulder occasionally.</p>
+
+<p>It became clear that the evening’s true curriculum was not found in lesson plans. Desire, influence, and subtle domination were the courses of study. I was both student and teacher, learning rapidly, testing my own limits.</p>
+
+<p>By the second hour, the party had migrated to a private lounge—a hidden room with velvet seats and muted lights, the perfect space for whispered confidences. Julian guided me to a corner, his hand steady on my lower back, while Cassandra and Mariel established their own spaces nearby, strategically, provocatively.</p>
+
+<p>Julian’s lips found my neck, his breath hot and insistent. “Do you understand what this is?” he murmured. “Every touch, every glance, is a declaration of power. The wrong move and the lesson could be ruinous.”</p>
+
+<p>“I understand,” I whispered, shivering under the heat of his mouth. “And I intend to learn.”</p>
+
+<p>Hands began to roam. Cassandra’s fingers pressed against my side, teasing, testing, while Mariel’s lips brushed mine briefly in a mischievous, possessive gesture. Julian’s hands traced down my spine, over the curve of my waist, and I was lost in the interplay, in the sensual choreography of attention, temptation, and challenge.</p>
+
+<p>Professor Han’s presence in the room added a new layer of danger. His gaze lingered, sharp and appraising, watching the interactions with an intensity that was both professional and personal. I felt his eyes mapping my body, noting how I responded to Julian, to Cassandra, to Mariel. Every shiver, every involuntary gasp, was data—an unspoken evaluation.</p>
+
+<p>Julian’s hand slipped beneath the hem of my skirt. Cassandra’s fingers tangled with mine, guiding them toward her own form. Mariel pressed herself against me, her whisper hot in my ear, her lips grazing the sensitive skin of my neck. The room became a vortex of desire and strategic play.</p>
+
+<p>We were professors, students, courtiers, predators—all at once. The sensuality of the moment intertwined with the thrill of power and subversion. Each kiss, each touch, was a lesson; each gasp, a test.</p>
+
+<p>Julian’s lips moved with intent, his fingers mapping my curves, his body pressing mine against the velvet of the seat. Cassandra watched, her hand now tracing my thigh deliberately, while Mariel leaned in, offering teasing kisses to both my ear and neck. The collision of bodies, mouths, and desire blurred boundaries, dissolving hierarchies while reaffirming them in the most intimate ways.</p>
+
+<p>The pleasure was both explicit and cerebral. Every movement, every sigh, carried meaning. Power, desire, and seduction were inseparable, as I realized fully for the first time. The university’s polished halls had given way to an unpolished truth: behind the façade of syllabi, committees, and polite conversation lay a web of appetite, competition, and intricate erotic power plays.</p>
+
+<p>I surrendered, but on my terms, guiding Julian, Cassandra, and Mariel in turn. Hands met skin, lips pressed against lips, murmurs of desire punctuated the intellectual game. Every movement was both instruction and seduction. I had become a master in both arenas, teaching the art of influence while learning the art of indulgence.</p>
+
+<p>As dawn approached, the lounge quieted. The remnants of our night—disheveled clothing, scattered wine glasses, flushed skin—were evidence of lessons learned and power claimed. Julian held me close, whispering in my ear. “You understand now,” he said, “how intellect and desire coexist. Every action is both pedagogy and provocation.”</p>
+
+<p>Cassandra smiled, her eyes alight with triumph. Mariel pressed a last kiss to my temple, soft but insistent. The game was far from over. University politics, I realized, was not merely administrative; it was erotic, dangerous, and exquisite.</p>
+
+<p>I left the lounge transformed. The corridors of Seojin University, the offices of professors, the whispers in faculty meetings—all were now arenas. Lessons were not confined to classrooms; they were written on skin, in glances, in the subtle assertion of will.</p>
+
+<p>And I, the expatriate turned provocateur, was ready to master both curricula: the academic and the carnal.</p>
+
+<p>Because in Seoul, the true syllabus was seduction, and the final exam was always pleasure, power, and scandal.</p>
+        </div>
+        <div class="chapter-meta">
+          <span>In Progress • 1,800 words</span>
+          <span class="warning-badge">Mature Themes</span>
+        </div>
+        <a href="#" class="read-more">Attend Class</a>
+      </article>
+
+      <!-- Character Study -->
+      <article class="chapter-card">
+        <h2 class="chapter-title">Character Study: The Marquise</h2>
+        <div class="chapter-excerpt">
+          <p>Every expatriate community has one: the woman who arrived seemingly innocent and left enlightened in all the wrong ways. In our Seoul circle, she is known as <strong>Cassandra Deveraux</strong>—though she claims no formal surname, the air of aristocracy follows her like perfume...</p>
+        </div>
+        <div class="full-text">
+          <p><strong>Origin and Arrival</strong><br>Cassandra appeared in Seoul not as a predator, but as a curious observer. Fresh off a plane from somewhere in Europe, she carried a portfolio of credentials, a suitcase of modest clothes, and eyes wide with untested ambition. In cafés, she asked questions about local life, about teaching contracts, about cultural norms, genuinely—or so she seemed. Her innocence was her first mask, disarming both mentors and rivals She learned quickly. Every expatriate gathering, every whispered conversation in Filigrane, every rooftop party or noraebang excursion became her laboratory. She observed reactions, tested limits, and catalogued human desire like a scientist taking meticulous notes. Each glance, every hesitant touch, every confession was data—information she would later use with precision.</p>
+          
+          <p><strong>Transformation and Education in Scandal</strong><br>Cassandra's transformation was subtle, almost imperceptible at first. She watched newcomers flounder in social codes, laughed quietly at faux pas, and noted which smiles were genuine, which were lies. By the time she claimed her first "victim"—an earnest teacher who underestimated her—the expatriate community had begun to whisper.</p>
+          
+          <p>She understood early that scandal was currency. A misstep, a revealed secret, a seduction, or even a well-placed rumor could elevate or destroy reputations. Cassandra chose elevation: her power derived from knowing what others wanted and withholding it until the moment she could extract the greatest advantage.</p>
+          
+          <p><strong>Mechanics of the Marquise</strong><br>The Marquise operates on multiple levels:<br>
+          • <strong>Observation</strong>: Cassandra's eyes are constantly measuring. She notices tension, desire, envy, and weakness. Each gesture, word, or hesitation becomes a tool.<br>
+          • <strong>Manipulation</strong>: She crafts situations that test boundaries, exposing desires while concealing her own intentions. A touch here, a whispered compliment there, a subtle rivalry—she choreographs interactions as one would direct a play.<br>
+          • <strong>Seduction</strong>: Sexuality is both weapon and language. Cassandra's kisses are rarely gratuitous; each caress, each glance, is calculated to provoke, ensnare, and dominate. She teaches others to yearn while remaining unattainable, intoxicating those around her.<br>
+          • <strong>Psychological Control</strong>: She understands the minds she engages. Flattery, teasing, selective disclosure, and emotional manipulation create a delicate balance of attachment, fear, and desire. She excels at making others complicit in their own surrender.</p>
+          
+          <p><strong>Interactions with Other Characters</strong><br>
+          • <strong>Julian Devereux</strong>: Cassandra treats him as both rival and ally. Their flirtation is intellectual and erotic, a chess game layered in subtle tension. Neither truly dominates the other; their relationship is defined by mutual recognition of cunning and appetite.<br>
+          • <strong>Mariel</strong>: The softer predator, sometimes rival, sometimes protégé. Cassandra uses Mariel's desire for approval as leverage, guiding, teasing, and occasionally testing her limits for amusement.<br>
+          • <strong>The Narrator</strong>: The newcomer serves as both audience and participant. Cassandra introduces her to the rules of the expatriate court, revealing the intoxicating blend of power, desire, and scandal. She simultaneously challenges, entices, and educates, molding the narrator into someone who can play the game—or fall victim to it.</p>
+          
+          <p><strong>Psychology and Inner Life</strong><br>Cassandra is not merely manipulative for sport; she is driven by understanding, mastery, and survival. Her innocence was a form of camouflage, and her current power is a natural evolution of intelligence, desire, and adaptability. She is capable of empathy, but it is measured, controlled. Pleasure is intertwined with intellect; seduction is both art and science.</p>
+          
+          <p>Her morality is fluid. In the expatriate court, rigid ethics are a liability. She thrives because she operates in shades of gray, delighting in subtle cruelty, dramatic flourishes, and the whispered confessions of those ensnared. Each conquest—romantic, erotic, or social—is a lesson for both her and her audience.</p>
+          
+          <p><strong>The Marquise's Effect on the Expatriate Community</strong><br>Cassandra is the pulse of scandal. New arrivals are unwittingly educated in her methods, learning the intoxicating and dangerous rules of engagement by observing or succumbing. Her presence elevates the stakes, her movements a reminder that the expatriate world is not a collection of colleagues, but a court in which cunning, desire, and performance dictate survival.</p>
+          
+          <p>The Marquise is always watching, always calculating. Every party, every café encounter, every noraebang session is a stage for demonstration, seduction, and domination. She is simultaneously predator, muse, and queen, leaving a trail of enlightened—but often compromised—individuals in her wake.</p>
+          
+          <p><strong>Conclusion: The Archetype Perfected</strong><br>Every expatriate community has its lessons, its games, and its secret hierarchy. The Marquise embodies the apex of this social ecosystem: intelligent, erotic, ruthless, and dazzlingly self-aware. She teaches, manipulates, seduces, and survives, leaving behind a legacy of desire, fear, and admiration. In her presence, every individual becomes both actor and audience, participant and victim, student and lesson.</p>
+          
+          <p>Cassandra arrived innocent, and she left enlightened in all the wrong ways—not morally, but psychologically and erotically. She is both a warning and a model, a living case study in the art of power, seduction, and human intrigue. In the land of morning calm, the Marquise is the true currency.</p>
+        </div>
+        <div class="chapter-meta">
+          <span>Character Notes • 900 words</span>
+          <span class="warning-badge">Psychological</span>
+        </div>
+        <a href="#" class="read-more">Meet Her</a>
+      </article>
+
+      <!-- Layout Experiments -->
+      <<article class="chapter-card">
+  <h2 class="chapter-title">Chapter 4: Epistolary Experiments</h2>
+  <div class="chapter-excerpt">
+    <p>Testing different ways to present narrative - through letters, emails, texts, and digital formats...</p>
+    <p><em>"Every format tells the story differently, reveals different truths."</em></p>
+  </div>
+  <div class="full-text">
+    
+    <<p><strong>1. Traditional Letter Format</strong></p>
+<div class="letter" style="font-family: 'Georgia', serif; font-style: italic; padding: 2em; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); background-color: #f9f7f4; background-image: linear-gradient(90deg, #e8e4df 1px, transparent 1px), linear-gradient(180deg, #e8e4df 1px, transparent 1px); background-size: 20px 24px; max-width: 600px; margin: 20px auto; position: relative; cursor: pointer; transition: transform 0.3s ease;" onclick="this.style.transform = this.style.transform ? '' : 'scale(1.05)'">
+  <p style="text-align: right; margin-bottom: 2em; color: #5a5a5a; font-size: 0.9em;"><em>Letter from Cassandra</em><br>
+  <em>Seoul, November 12</em></p>
+  
+  <p style="line-height: 1.8; margin: 1.2em 0; color: #2c2c2c;">My dear friend,</p>
+  
+  <p style="line-height: 1.8; margin: 1.2em 0; color: #2c2c2c;">I write to you in the hush of midnight, when the city outside whispers secrets only I can hear. Julian has finally made his intentions clear, yet I wonder—am I the student or the lesson?</p>
+  
+  <p style="line-height: 1.8; margin: 1.2em 0; color: #2c2c2c;">The expatriate court grows more treacherous by the day. New arrivals stumble through our unspoken protocols, and I find myself both predator and guide.</p>
+  
+  <p style="text-align: right; margin-top: 2em; line-height: 1.8; color: #2c2c2c;">Yours,<br>
+  Cassandra</p>
+</div>
+
+    <br>
+
+    <p><strong>2. Modern Email Exchange</strong></p>
+<div class="email" style="border-left: 3px solid #f06; padding: 1em; background: #fafafa; font-family: 'Arial', sans-serif; margin: 20px auto; max-width: 600px; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer;" onclick="this.style.opacity = this.style.opacity === '0.7' ? '1' : '0.7'">
+  <p style="margin: 0 0 1em 0; color: #333; font-size: 0.9em;"><strong>From:</strong> Julian Devereux &lt;julian@seoulcourts.edu&gt;<br>
+  <strong>To:</strong> Narrator &lt;newexpat@gmail.com&gt;<br>
+  <strong>Subject:</strong> Lesson Plans (and other matters)<br>
+  <strong>Date:</strong> November 13, 2025, 22:47</p>
+  
+  <p style="margin: 1em 0; color: #444; line-height: 1.5;">You asked about discretion. Let's not confuse etiquette with curiosity. The students are listening—but not to us.</p>
+  
+  <p style="margin: 1em 0; color: #444; line-height: 1.5;">Meet me at room 12B tomorrow, after hours. Dress code: academic with undertones of rebellion.</p>
+  
+  <p style="margin: 1em 0 0 0; color: #444; line-height: 1.5;">- Julian</p>
+</div>
+
+    <br>
+
+    <p><strong>3. Text Message Thread</strong></p>
+    <div class="chat">
+      <p><em>Julian:</em> Arrived at the café yet? 🖤</p>
+      <p><em>Narrator:</em> Just got here. The usual table?</p>
+      <p><em>Cassandra:</em> Don't forget me 😈</p>
+      <p><em>Julian:</em> Impossible. You haunt every conversation.</p>
+      <p><em>Narrator:</em> Should I be concerned that everyone speaks in riddles here?</p>
+      <p><em>Cassandra:</em> Concern is the first step toward education, darling.</p>
+    </div>
+
+    <br>
+
+    <p><strong>4. Social Media Posts</strong></p>
+    <div class="social-media">
+      <p><strong>@cassandra_seoul</strong> • 2 hours ago</p>
+      <p>Late night conversations at the embassy. Some secrets are worth the risk. The game is always more interesting when diplomatic immunity is involved.</p>
+      <p>#SeoulNights #DiplomaticImmunity #ExpatLife</p>
+    </div>
+
+    <br>
+
+    <p><strong>5. Voice Note Transcription</strong></p>
+    <div class="code-story">
+      <p>// Voice note transcript - auto-generated</p>
+      <p>// [Static] ...can you hear me? Good. Listen carefully...</p>
+      <p>// Julian's voice: "The package is ready. Saturday evening."</p>
+      <p>// [Background noise: Seoul traffic, distant karaoke]</p>
+      <p>// Cassandra's whisper: "She's learning faster than expected."</p>
+      <p>// [End transmission]</p>
+    </div>
+
+    <br>
+
+    <p><strong>6. Encrypted Communication</strong></p>
+    <div class="email">
+      <p><strong>From:</strong> V.Park.Seoul@protonmail.com<br>
+      <strong>To:</strong> J.Chen.Temp@protonmail.com<br>
+      <strong>Subject:</strong> Weekend Plans<br>
+      <strong>Encryption:</strong> End-to-End</p>
+      
+      <p>Jessica,</p>
+      
+      <p>The package you requested is ready for pickup. Saturday evening, usual location. Dress code: diplomatic immunity required.</p>
+      
+      <p>Remember—in Seoul, everyone's playing a game. The only question is whether you're playing to win.</p>
+      
+      <p>V.</p>
+    </div>
+
+    <br>
+
+    <p><strong>7. Found Note</strong></p>
+    <div class="post-it">
+      <p><em>Post-it found in Luxury Noraebang Room 12B</em></p>
+      <p><em>Written in red ink on hotel stationary:</em></p>
+      <p>"The beautiful thing about corruption is how it feels like freedom at first. By the time you realize you're trapped, you're in too deep to care. —V"</p>
+    </div>
+
+    <br>
+
+    <p><strong>8. University Forum Thread</strong></p>
+    <div class="chat">
+      <p><strong>Anonymous_Prof:</strong> Did anyone else notice the tension in the faculty meeting?</p>
+      <p><strong>Seoul_Teacher_99:</strong> You mean between Julian and the new hire?</p>
+      <p><strong>Expat_Observer:</strong> "Tension" is one word for it...</p>
+      <p><strong>Anonymous_Prof:</strong> Some of us are trying to maintain professional standards here.</p>
+      <p><strong>Seoul_Teacher_99:</strong> Professional standards are so last semester.</p>
+    </div>
+
+    <br>
+
+    <p><strong>9. Diary Entry</strong></p>
+    <div class="letter">
+      <p><em>From the private journal of [REDACTED]</em><br>
+      <em>November 15, 2025</em></p>
+      
+      <p>I thought I understood the rules when I arrived. Teach your classes, collect your paycheck, maybe see some sights on the weekends. How naive I was.</p>
+      
+      <p>This isn't a job—it's an education in desire, manipulation, and the thin line between them. Every coffee shop meeting is a chess match. Every departmental gathering is a stage for performance.</p>
+      
+      <p>Julian was right: the game began the moment I stepped off the plane. I just didn't know I was already playing.</p>
+    </div>
+
+    <br>
+
+    <p><strong>10. Mixed Timeline Format</strong></p>
+    <div class="chat">
+      <p><strong>12:30 AM - WhatsApp:</strong></p>
+      <p><em>Cassandra:</em> Room 12B. Now.</p>
+      
+      <p><strong>12:47 AM - Email:</strong></p>
+      <p><em>Julian to All:</em> "Emergency faculty meeting postponed until further notice."</p>
+      
+      <p><strong>1:15 AM - Voice Note:</strong></p>
+      <p><em>[Muffled]</em> "...don't trust the new professor... she knows more than she's letting on..."</p>
+      
+      <p><strong>1:33 AM - Text:</strong></p>
+      <p><em>Unknown Number:</em> You're in deeper than you think. Be careful who you trust.</p>
+    </div>
+
+    <br>
+
+    <p><strong>Design Implementation Notes:</strong></p>
+    <p>Each format uses simple HTML containers with class names that can be styled with your existing CSS framework:</p>
+    <p>• <code>.letter</code> for traditional correspondence</p>
+    <p>• <code>.email</code> for digital communications</p>
+    <p>• <code>.chat</code> for text/message threads</p>
+    <p>• <code>.social-media</code> for social posts</p>
+    <p>• <code>.code-story</code> for transcripts/technical formats</p>
+    <p>• <code>.post-it</code> for found documents</p>
+
+  </div>
+  <div class="chapter-meta">
+    <span>Format Tests • Multiple Media</span>
+    <span class="warning-badge">Meta</span>
+  </div>
+  <a href="#" class="read-more">See All Formats</a>
+</article>
+    </div>
+  </div>
+
+  <script>
+    // Fixed toggle behavior for ALL chapters
+    document.querySelectorAll('.chapter-card').forEach(card => {
+      const title = card.querySelector('.chapter-title');
+      const excerpt = card.querySelector('.chapter-excerpt');
+      const fullText = card.querySelector('.full-text');
+      const readMore = card.querySelector('.read-more');
+
+      // Toggle excerpt visibility on title click
+      if (title && excerpt) {
+        title.addEventListener('click', () => {
+          if (excerpt.style.display === 'none') {
+            excerpt.style.display = 'block';
+          } else {
+            excerpt.style.display = 'none';
+          }
+        });
+      }
+
+      // Toggle full text visibility on read-more click
+      if (readMore && fullText) {
+        readMore.addEventListener('click', e => {
+          e.preventDefault();
+          fullText.classList.toggle('visible');
+          
+          // Update button text
+          if (fullText.classList.contains('visible')) {
+            readMore.textContent = readMore.textContent.includes('Read') ? 'Hide Chapter' : 
+                                   readMore.textContent.includes('Enter') ? 'Exit Room' :
+                                   readMore.textContent.includes('Attend') ? 'Leave Class' :
+                                   readMore.textContent.includes('Meet') ? 'Step Away' : 'Hide';
+          } else {
+            // Reset to original text based on content
+            if (card.querySelector('.chapter-title').textContent.includes('Chapter 1')) {
+              readMore.textContent = 'Read Full Chapter';
+            } else if (card.querySelector('.chapter-title').textContent.includes('Chapter 2')) {
+              readMore.textContent = 'Enter the Room';
+            } else if (card.querySelector('.chapter-title').textContent.includes('Chapter 3')) {
+              readMore.textContent = 'Attend Class';
+            } else if (card.querySelector('.chapter-title').textContent.includes('Marquise')) {
+              readMore.textContent = 'Meet Her';
+            } else {
+              readMore.textContent = 'See Experiments';
+            }
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

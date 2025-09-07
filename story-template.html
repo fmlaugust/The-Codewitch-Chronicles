@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Title - Black Barbie Chronicles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="story-style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Black Barbie Chronicles</h1>
+            </div>
+            <div class="nav-actions">
+                <a href="index.html" class="back-link">Back to Chronicles</a>
+                <a href="../index.html" class="back-link home-link">Main Site</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Story Header -->
+    <header class="story-header">
+        <div class="header-content">
+            <div class="story-meta">
+                <span class="genre-tag">Genre • Literary Style</span>
+                <span class="reading-time">Est. Reading Time: X min</span>
+            </div>
+            <h1 class="story-title">Story Title Goes Here</h1>
+            <p class="story-subtitle">A compelling subtitle or tagline</p>
+            
+            <!-- Content Warning -->
+            <div class="content-warning">
+                <h3>Content Advisory</h3>
+                <p>Specific warnings for this story's content go here.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Story Content -->
+    <main class="story-content">
+        <div class="story-container">
+            
+            <!-- Chapter/Section 1 -->
+            <section class="story-section">
+                <h2 class="section-title">Chapter/Section Title (Optional)</h2>
+                
+                <div class="story-text">
+                    <p>Your story content begins here. Each paragraph gets its own &lt;p&gt; tag for proper formatting and readability.</p>
+                    
+                    <p>You can use <em>emphasis</em> and <strong>strong text</strong> for styling within your narrative.</p>
+                    
+                    <p class="story-break">• • •</p>
+                    
+                    <p>Story breaks can separate scenes or time jumps.</p>
+                </div>
+            </section>
+            
+            <!-- Chapter/Section 2 -->
+            <section class="story-section">
+                <h2 class="section-title">Another Section (Optional)</h2>
+                
+                <div class="story-text">
+                    <p>Continue your story here. The template supports multiple sections if you want to break up longer pieces.</p>
+                    
+                    <!-- Dialogue Example -->
+                    <p>"Dialogue looks like this," she said, adjusting her stilettos with practiced precision.</p>
+                    
+                    <p>"And responses flow naturally in the next paragraph," he replied, his eyes following the curve of her movement.</p>
+                    
+                    <!-- Narrative continues -->
+                    <p>Narrative description flows between dialogue, painting the scene with sensory details and internal monologue.</p>
+                </div>
+            </section>
+            
+            <!-- Add more sections as needed -->
+            
+        </div>
+    </main>
+
+    <!-- Story Footer -->
+    <footer class="story-footer">
+        <div class="footer-container">
+            
+            <!-- Author Note -->
+            <div class="author-note">
+                <h3>Author's Note</h3>
+                <p>Optional space for reflections, context, or commentary about this particular story.</p>
+            </div>
+            
+            <!-- Navigation -->
+            <div class="story-navigation">
+                <div class="nav-section">
+                    <h4>More Chronicles</h4>
+                    <div class="story-links">
+                        <a href="dangerous-liaisons.html" class="nav-story-link">Dangerous Liaisons</a>
+                        <a href="fear-loathing.html" class="nav-story-link">Fear & Loathing in Seoul</a>
+                        <a href="pirates.html" class="nav-story-link coming-soon">Pirates of the Han River</a>
+                        <a href="sex-city-seoul.html" class="nav-story-link coming-soon">Sex in the City (Seoul Edition)</a>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <h4>Explore More</h4>
+                    <div class="site-links">
+                        <a href="index.html" class="nav-link">Chronicles Index</a>
+                        <a href="../index.html" class="nav-link">Main Site</a>
+                        <a href="../index.html#mirror" class="nav-link">The Mirror</a>
+                        <a href="../index.html#spells" class="nav-link">Code Spells</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Reading progress indicator
+        function updateReadingProgress() {
+            const article = document.querySelector('.story-content');
+            const scrollTop = window.pageYOffset;
+            const docHeight = article.offsetHeight;
+            const winHeight = window.innerHeight;
+            const scrollPercent = scrollTop / (docHeight - winHeight);
+            const progressBar = document.querySelector('.reading-progress');
+            
+            if (progressBar) {
+                progressBar.style.width = Math.min(scrollPercent * 100, 100) + '%';
+            }
+        }
+
+        // Create reading progress bar
+        const progressBar = document.createElement('div');
+        progressBar.className = 'reading-progress';
+        document.body.appendChild(progressBar);
+
+        window.addEventListener('scroll', updateReadingProgress);
+        window.addEventListener('resize', updateReadingProgress);
+
+        // Dynamic navbar on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Prevent clicks on coming soon links
+        document.querySelectorAll('.coming-soon').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.style.animation = 'shake 0.5s ease-in-out';
+                setTimeout(() => {
+                    this.style.animation = '';
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
